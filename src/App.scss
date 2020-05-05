@@ -1,0 +1,208 @@
+$brand-color: #3681C1;
+$peony-pink: #ECDAE6;
+$pale-gray: #EDEDED;
+$gray: #525252;
+$text-font: Courier, monospace;
+$header-font: Courier-Bold, Courier, monospace;
+
+html body {
+  background-color: $pale-gray;
+}
+
+@mixin headerstyle {
+  font-family: $header-font;
+  font-size: 36px;
+  color: #3681C1;
+  text-align: center;
+}
+
+p {
+  font-family: $text-font;
+  font-size: 24px;
+  color: #525252;
+}
+
+h1, h3 {
+  color: $gray;
+  font-family: Courier;
+  font-size: 29px;
+  text-align: center;
+}
+
+button.btn-dark {
+
+  color: #fff;
+  background-color: $brand-color;
+
+}
+
+button.btn-primary {
+
+  background-color: $brand-color;
+
+  &:hover {
+
+    background-color: lighten($brand-color, 40%);
+
+  }
+}
+
+body {
+  margin: 4%;
+  background-color: #EDEDED;
+
+}
+
+ul, li {
+  list-style: none;
+  padding-left: 0;
+}
+
+.title-info h3 {
+  @include headerstyle;
+
+}
+
+
+header {
+  .logo {
+    margin-top: -176px;
+  }
+
+  .tagline {
+    font-family: Courier;
+    font-size: 29px;
+    color: $gray;
+    margin-top: 20vw;
+
+    h3 {
+      text-align: left;
+    }
+  }
+
+  .social-links {
+    float: right;
+
+    .social-img {
+      margin: 10px;
+    }
+
+    .youtube {
+      margin-right: 0;
+    }
+  }
+
+  .navigation ul {
+    clear: both;
+    float: right;
+    text-align: right;
+    margin-top: 5%;
+
+    a {
+      font-family: Courier;
+      font-size: 24px;
+      color: #0E87E4;
+    }
+  }
+}
+
+.project-display {
+
+  .title-info {
+
+    ul {
+
+      li.project-title:nth-child(3) {
+        background-image: url("images/videobkgrnd.svg");
+      }
+
+      li:nth-child(2) {
+        background-image: url("images/videobkgrnd.svg");
+      }
+
+      li:nth-child(1) {
+        background-image: url("images/videobkgrnd.svg");
+      }
+    }
+
+  }
+}
+
+/* General Styles */
+
+form input {
+  border: 1px solid gray;
+}
+
+.admin_page,
+.portfolio_page {
+
+  .user-profile img {
+    border-radius: 400px;
+    width: 10vw;
+  }
+
+  //.upload-images input {
+  //  margin-top: 5vh;
+  //
+  //  .btn {
+  //    padding: 25px;
+  //    margin-left: 0;
+  //  }
+  //
+  //}
+
+
+  .project-admin {
+    margin-top: 5vh;
+  }
+
+  .carousel {
+
+    body {
+      background: #111;
+    }
+
+    .carousel-inner {
+      width: 60vw;
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    li:nth-child(n) {
+      animation: xfade 16s 0s infinite;
+    }
+
+    li:nth-child(3) {
+      animation: xfade 16s 4s infinite;
+    }
+
+    li:nth-child(2) {
+      animation: xfade 16s 8s infinite;
+    }
+
+    li:nth-child(1) {
+      animation: xfade 16s 12s infinite;
+    }
+
+    @keyframes xfade {
+      17% {
+        opacity: 1;
+      }
+      25% {
+        opacity: 0;
+      }
+      92% {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+//importing Bootstrap after the overrides so they will show up.
+
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap/scss/forms';
+//@import '~bootstrap/scss/carousel';
+@import '~bootstrap/scss/custom-forms';
