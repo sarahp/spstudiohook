@@ -1,4 +1,5 @@
 $brand-color: #3681C1;
+$clapback-purple: #333D68;
 $peony-pink: #ECDAE6;
 $pale-gray: #EDEDED;
 $gray: #525252;
@@ -6,7 +7,7 @@ $text-font: Courier, monospace;
 $header-font: Courier-Bold, Courier, monospace;
 
 html body {
-  background-color: $pale-gray;
+  background-color: $clapback-purple;
 }
 
 @mixin headerstyle {
@@ -21,6 +22,7 @@ p {
   font-size: 24px;
   color: #525252;
 }
+
 
 h1, h3 {
   color: $gray;
@@ -75,9 +77,13 @@ header {
     color: $gray;
     margin-top: 20vw;
 
-    h3 {
-      text-align: left;
-    }
+      h3 {
+        text-align: left;
+
+        span {
+          background: $pale-gray;
+        }
+      }
   }
 
   .social-links {

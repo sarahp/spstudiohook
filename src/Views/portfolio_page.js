@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import Admin from "./admin_page";
 import AddProject from "../components/add_project";
 import DisplayProject from "../components/display_project";
-import DeleteProject from "../components/delete_project";
 
 class Portfolio extends Component {
 

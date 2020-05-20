@@ -43,7 +43,7 @@ class App extends Portfolio {
                                         </ul>
                                     </div>
                                     <div className="tagline">
-                                    <h3>Turning stories into applications, videos, and more since 2004.</h3>
+                                    <h3><span>Turning stories into applications, videos, and more since 2004.</span></h3>
                                     </div>
                                 </div>
                              </div>
