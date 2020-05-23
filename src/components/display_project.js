@@ -1,11 +1,16 @@
 import React, {Component} from "react";
 import 'firebase/database';
 import 'firebase/storage';
+import
 import firebase, {auth} from '../firebase.js';
+import {
+    RecoilRoot,
+    atom,
+    useRecoilState,
+} from 'recoil';
 
 
-class DisplayProject extends Component {
-
+ function DisplayProject () {
 
     componentDidMount() {
         auth.onAuthStateChanged((user) => {
